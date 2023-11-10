@@ -34,4 +34,11 @@ body {
 
 .section {
   padding-bottom: to-rem(64);
+
+  .subtitulo {
+    color: var(--Neutral-400);
+    font-size: to-rem(18);
+    font-weight: var(--bold);
+    line-height: 1.2;
+  }
 }
