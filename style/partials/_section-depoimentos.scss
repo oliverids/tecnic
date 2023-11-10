@@ -27,7 +27,7 @@
         }
 
         .depoimento {
-          background: var(--Neutral-100);
+          background: var(--Neutral-200);
           padding: to-rem(56) to-rem(20) to-rem(48);
           border-radius: var(--border-large);
           border: to-rem(1.5) solid rgba(70, 78, 106, 0.60);
@@ -79,7 +79,7 @@
           &-avaliacao {
 
             svg path {
-                fill: var(--Neutral-100);
+                fill: var(--Neutral-200);
               }
             
           }
@@ -91,7 +91,7 @@
         
         &-active {
           background: linear-gradient(90deg, #464E6A 0%, #B4B9C9 100%);
-          box-shadow: 0 0 0 to-rem(2) var(--Neutral-100), 0 0 0 to-rem(3) var(--Neutral-600);
+          box-shadow: 0 0 0 to-rem(2) var(--Neutral-200), 0 0 0 to-rem(3) var(--Neutral-600);
         }
       }
     }

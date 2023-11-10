@@ -45,6 +45,13 @@ body {
   .highlight {
     color: var(--Neutral-400);
   }
+
+  .underline {
+    text-decoration: underline;
+    text-decoration-thickness: to-rem(4);
+    text-underline-offset: to-rem(4);
+    text-decoration-color: var(--Neutral-400);
+  }
 }
 
 .swiper-pagination {

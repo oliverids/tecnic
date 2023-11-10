@@ -1,0 +1,103 @@
+@use "../abstracts" as *;
+
+.contato {
+  background: var(--Neutral-500);
+  padding: to-rem(64) 0;
+
+  .container {
+    flex-direction: column;
+
+    .form-info {
+      margin-bottom: to-rem(48);
+
+      h2 {
+        margin: to-rem(8) 0 to-rem(32);
+        color: var(--Neutral-200);
+      }
+
+      p {
+        color: var(--Neutral-300);
+        font-size: to-rem(20);
+      }
+    }
+
+    .form-wrapper {
+      background: var(--Neutral-200);
+      border-radius: var(--border-regular);
+      padding: to-rem(48) to-rem(24);
+
+      h3 {
+        font-size: to-rem(20);
+        font-weight: var(--medium);
+        margin-bottom: to-rem(40);
+      }
+
+      form {
+        fieldset {
+          background: none;
+          border: none;
+          display: flex;
+          flex-direction: column;
+
+          &:not(:last-child) {
+            margin-bottom: to-rem(20);
+          }
+
+          label {
+            font-weight: var(--medium);
+            color: var(--Neutral-500);
+            margin-bottom: to-rem(20);
+          }
+
+          input,
+          select {
+            background: var(--Neutral-300);
+            border-radius: var(--border-small);
+            padding: to-rem(16) to-rem(20);
+            font-size: to-rem(16);
+            line-height: 1.5;
+            color: var(--Neutral-600);
+
+            &::placeholder {
+              color: var(--Neutral-500);
+            }
+          }
+
+          .select-wrapper {
+            width: 100%;
+            position: relative;
+
+            select {
+              width: 100%;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              font-weight: var(--medium);
+
+              option:checked,
+              option:hover {
+                background-color: var(--Neutral-500);
+                color: var(--Neutral-200);
+              }
+            }
+
+
+
+            &::after {
+              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M7 10.6035L12 15.6035L17 10.6035" stroke="%23464E6A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+              position: absolute;
+              right: to-rem(20);
+              top: to-rem(16);
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          height: to-rem(56);
+          margin-top: to-rem(40);
+        }
+      }
+    }
+  }
+}

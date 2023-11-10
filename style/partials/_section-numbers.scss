@@ -16,13 +16,6 @@
       margin: to-rem(8) 0 to-rem(40);
       font-weight: var(--bold);
       padding: 0 to-rem(4);
-
-      .underline {
-        text-decoration: underline;
-        text-decoration-thickness: to-rem(4);
-        text-underline-offset: to-rem(4);
-        text-decoration-color: var(--Neutral-200);
-      }
     }
 
     .number-item {
