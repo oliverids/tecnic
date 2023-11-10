@@ -13,7 +13,7 @@ body {
 .button {
   height: to-rem(48);
   padding: 0 to-rem(32);
-  border-radius: to-rem(8);
+  border-radius: var(--border-regular);
   font-size: to-rem(18);
   font-weight: var(--semibold);
   line-height: 1.2;
@@ -30,4 +30,8 @@ body {
     color: var(--Neutral-500);
     border: to-rem(1.5) solid currentColor;
   }
+}
+
+.section {
+  padding-bottom: to-rem(64);
 }

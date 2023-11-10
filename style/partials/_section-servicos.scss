@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.servicos .container {
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: to-rem(48);
+  }
+
+  .swiper {
+    width: 100%;
+
+    .card {
+      border-radius: var(--border-regular);
+      overflow: hidden;
+      box-shadow: 0 to-rem(4) to-rem(16) 0 rgba(180, 185, 201, 0.40);
+      width: to-rem(280);
+
+      &-image {
+        width: 100%;
+        background: var(--Neutral-400);
+        height: to-rem(160);
+      }
+
+      &-info {
+        padding: to-rem(20) to-rem(20) to-rem(32);
+
+        h3 {
+          margin-bottom: to-rem(20);
+        }
+
+        .card-lista {
+          &-item {
+
+            p {
+              display: flex;
+
+              &::before {
+
+                content: url(assets/icon/card-info_icon.svg);
+                margin: to-rem(4) to-rem(10) 0 0;
+              }
+            }
+
+            &:not(:last-child) {
+              margin-bottom: to-rem(16);
+            }
+          }
+        }
+      }
+    }
+
+    .card-pagination {
+      position: static;
+      margin-top: to-rem(40);
+
+      .swiper-pagination-bullet {
+        width: to-rem(12);
+        height: to-rem(12);
+        background: var(--Neutral-300);
+        opacity: 1;
+
+        &-active {
+          background: var(--Neutral-500);
+        }
+      }
+    }
+  }
+}
