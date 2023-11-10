@@ -1,0 +1,99 @@
+@use "../abstracts" as *;
+
+.depoimentos {
+  .container {
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+      margin-bottom: to-rem(48);
+    }
+
+    .swiper {
+      width: 100%;
+
+      .depoimento-card {
+        width: to-rem(300);
+        max-width: to-rem(496);
+        position: relative;
+
+        .depoimento-foto {
+          width: to-rem(88);
+          height: to-rem(88);
+          border-radius: 50%;
+          background: var(--Neutral-200);
+          margin: 0 auto to-rem(-40);
+          position: relative;
+        }
+
+        .depoimento {
+          background: var(--Neutral-100);
+          padding: to-rem(56) to-rem(20) to-rem(48);
+          border-radius: var(--border-large);
+          border: to-rem(1.5) solid rgba(70, 78, 106, 0.60);
+
+          &-nome {
+            color: var(--Neutral-600);
+            font-size: to-rem(20);
+            font-weight: var(--semibold);
+            line-height: 1.2;
+            text-transform: capitalize;
+            text-align: center;
+          }
+
+          &-funcao {
+            color: var(--Neutral-500);
+            line-height: 1.5;
+            text-transform: capitalize;
+            display: block;
+            text-align: center;
+            margin: to-rem(4) auto to-rem(16);
+          }
+
+          &-texto {
+            line-height: 1.5;
+            text-align: center;
+          }
+
+          &-avaliacao {
+            margin: to-rem(32) auto 0;
+
+            svg {
+              margin: 0 auto;
+
+              path {
+                fill: var(--Neutral-400);
+              }
+            }
+          }
+        }
+
+        &.swiper-slide-active .depoimento {
+          background: linear-gradient(90deg, #464E6A 0%, #B4B9C9 100%);
+          border-color: transparent;
+
+          * {
+            color: var(--Neutral-200);
+          }
+          
+          &-avaliacao {
+
+            svg path {
+                fill: var(--Neutral-100);
+              }
+            
+          }
+        }
+
+      }
+
+      .swiper-pagination-bullet {
+        
+        &-active {
+          background: linear-gradient(90deg, #464E6A 0%, #B4B9C9 100%);
+          box-shadow: 0 0 0 to-rem(2) var(--Neutral-100), 0 0 0 to-rem(3) var(--Neutral-600);
+        }
+      }
+    }
+  }
+}

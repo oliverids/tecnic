@@ -49,21 +49,5 @@
         }
       }
     }
-
-    .card-pagination {
-      position: static;
-      margin-top: to-rem(40);
-
-      .swiper-pagination-bullet {
-        width: to-rem(12);
-        height: to-rem(12);
-        background: var(--Neutral-300);
-        opacity: 1;
-
-        &-active {
-          background: var(--Neutral-500);
-        }
-      }
-    }
   }
 }
