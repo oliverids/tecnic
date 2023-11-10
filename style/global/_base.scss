@@ -6,6 +6,24 @@ body {
 }
 
 .container {
+  display: flex;
   padding: 0 to-rem(16);
 }
 
+.button {
+  height: to-rem(48);
+  padding: 0 to-rem(32);
+  border-radius: to-rem(8);
+  font-size: to-rem(18);
+  font-weight: var(--semibold);
+  line-height: 1.2;
+  text-align: center;
+  background: var(--Neutral-600);
+  color: var(--Neutral-200);
+
+  &.--borda {
+    background: none;
+    color: var(--Neutral-500);
+    border: to-rem(1.5) solid currentColor;
+  }
+}

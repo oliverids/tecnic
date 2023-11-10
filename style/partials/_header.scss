@@ -1,0 +1,134 @@
+@use "../abstracts" as *;
+
+header {
+  background: var(--Neutral-700);
+  padding: to-rem(24) 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  .container {
+    align-items: center;
+    justify-content: space-between;
+
+    #menu {
+      width: to-rem(32);
+      height: to-rem(32);
+
+      span {
+        //acessibilidade - leitor de tela
+        position: absolute;
+        left: -9999999px;
+      }
+
+      div {
+        width: to-rem(28);
+        height: to-rem(1.8);
+        background: var(--Neutral-500);
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        transition: .1s all ease-in-out;
+
+        &::before,
+        &::after {
+          display: block;
+          content: '';
+          width: to-rem(28);
+          height: to-rem(1.8);
+          background: var(--Neutral-500);
+          position: absolute;
+          transition: .2s all ease-in-out;
+        }
+
+        &::before {
+          transform: translateY(to-rem(-6));
+        }
+
+        &::after {
+          transform: translateY(to-rem(6));
+        }
+      }
+    }
+
+      #nav {
+        position: absolute;
+        height: calc(100vh - to-rem(86));
+        width: to-rem(328);
+        top: to-rem(86);
+        right: to-rem(-328);
+        background: var(--Neutral-700);
+        padding: to-rem(40) to-rem(16) 0;
+        z-index: 6;
+        opacity: 0;
+        visibility: hidden;
+        transition: .34s ease-in-out;
+
+        .internal-nav {
+          margin-bottom: to-rem(32);
+
+          li {
+            width: fit-content;
+
+            &:not(:last-child) {
+              margin-bottom: to-rem(16);
+            }
+
+            a {
+              font-weight: var(--medium);
+              font-size: to-rem(16);
+              line-height: 1.2;
+              padding: to-rem(14.5) to-rem(16);
+              color: var(--Neutral-500);
+            }
+          }
+        }
+
+        .nav-ctas {
+          display: flex;
+          flex-direction: column;
+
+          .button {
+            font-size: to-rem(16);
+            width: 100%;
+
+            &.--borda {
+              margin-top: to-rem(16);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &::before {
+                content: url(assets/icon/button-user_icon.svg);
+                margin-right: to-rem(10);
+              }
+            }
+          }
+        }
+      }
+  }
+
+  &.ativo {
+    .container {
+      #menu div {
+        background: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      #nav {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+      }
+    }
+  }
+}
