@@ -35,3 +35,10 @@ h3 {
   font-size: to-rem(18);
   line-height: 1.2;
 }
+
+h4 {
+  font-weight: var(--semibold);
+  font-size: to-rem(18);
+  line-height: 1;
+  color: var(--Neutral-300);
+}
