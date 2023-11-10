@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+body {
+  font-size: 16px;
+  font-family: var(--font-sans);
+}
+
+.container {
+  padding: 0 to-rem(16);
+}
+
