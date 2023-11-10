@@ -17,7 +17,11 @@ body {
   font-size: to-rem(18);
   font-weight: var(--semibold);
   line-height: 1.2;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: to-rem(176);
+  width: fit-content;
   background: var(--Neutral-600);
   color: var(--Neutral-200);
 

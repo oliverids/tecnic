@@ -8,3 +8,22 @@
 //     font-style: normal;
 //   }
 // }
+
+p {
+  color: var(--Neutral-500);
+  line-height: 1.55;
+}
+
+h1 {
+  font-weight: var(--semibold);
+  font-size: to-rem(28);
+  line-height: 1.2;
+  color: var(--Neutral-600);
+}
+
+h2 {
+  font-weight: var(--semibold);
+  font-size: to-rem(24);
+  line-height: 1.2;
+  color: var(--Neutral-500);
+}

@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+main {
+  //86px de altura do header + 48px de padding top = 134
+  padding: to-rem(134) 0 to-rem(64);
+
+  .container {
+    flex-direction: column;
+
+    .main-info {
+
+      h1, p {
+        text-align: center;
+      }
+
+      h1 {
+        margin: to-rem(40) 0 to-rem(16);
+      }
+
+      .button {
+        margin: to-rem(40) auto 0;
+      }
+    }
+  }
+}

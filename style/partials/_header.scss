@@ -93,12 +93,14 @@ header {
           .button {
             font-size: to-rem(16);
             width: 100%;
+            
+            &.button-sign {
+              background: var(--Neutral-500);
+            }
 
-            &.--borda {
+            &.button-user {
               margin-top: to-rem(16);
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              color: var(--Neutral-500);
 
               &::before {
                 content: url(assets/icon/button-user_icon.svg);
