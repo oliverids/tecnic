@@ -505,6 +505,9 @@ main .container .main-info .button {
 .servicos .container .swiper .card-info .card-lista-item:not(:last-child) {
   margin-bottom: 1rem;
 }
+.servicos .container .swiper .swiper-button-next {
+  display: none;
+}
 
 @media (min-width: 36rem) {
   .servicos .container-slide .swiper {
@@ -514,6 +517,34 @@ main .container .main-info .button {
 @media (min-width: 85.375rem) {
   .servicos {
     padding-top: 6rem;
+  }
+  .servicos .container-slide .swiper {
+    overflow: hidden;
+  }
+  .servicos .container-slide .swiper .swiper-button-next {
+    display: block;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 11rem;
+    background: linear-gradient(270deg, #FFF 16.15%, rgba(255, 255, 255, 0) 100%);
+    z-index: 7;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.15s ease-in-out;
+  }
+  .servicos .container-slide .swiper .swiper-button-next::after {
+    font-size: 1.25rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    color: var(--Neutral-500);
+    font-weight: var(--bold);
+  }
+  .servicos .container-slide .swiper .swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease-in-out;
   }
 }
 .numbers .container {

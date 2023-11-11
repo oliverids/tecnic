@@ -8,6 +8,9 @@ let servicosSlider = new Swiper(".card-slider", {
     el: ".card-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+  }
 });
 
 let depoimentosSlider = new Swiper(".depoimentos-slider", {

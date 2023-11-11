@@ -6,52 +6,52 @@
   .container {
     flex-direction: column;
     padding-right: 0;
-  
+
     h2 {
       margin-bottom: to-rem(48);
     }
-  
+
     .swiper {
       width: 100%;
       padding-right: to-rem(16);
-      clip-path: inset( -100vw -100vw -100vw 0 );
+      clip-path: inset(-100vw -100vw -100vw 0);
 
       @include media-min(small) {
         padding-right: 0;
-      } 
-  
+      }
+
       .card {
         border-radius: var(--border-regular);
         overflow: hidden;
         box-shadow: 0 to-rem(4) to-rem(16) 0 rgba(180, 185, 201, 0.40);
         width: to-rem(280);
-  
+
         &-image {
           width: 100%;
           background: var(--Neutral-400);
           height: to-rem(160);
         }
-  
+
         &-info {
           padding: to-rem(20) to-rem(20) to-rem(32);
-  
+
           h3 {
             margin-bottom: to-rem(20);
           }
-  
+
           .card-lista {
             &-item {
-  
+
               p {
                 display: flex;
-  
+
                 &::before {
-  
+
                   content: url(assets/icon/card-info_icon.svg);
                   margin: to-rem(4) to-rem(10) 0 0;
                 }
               }
-  
+
               &:not(:last-child) {
                 margin-bottom: to-rem(16);
               }
@@ -59,12 +59,16 @@
           }
         }
       }
+
+      .swiper-button-next {
+        display: none;
+      }
     }
   }
 }
 
 @include media-min(small) {
-  .servicos .container-slide .swiper{
+  .servicos .container-slide .swiper {
     overflow: visible;
   }
 }
@@ -72,5 +76,39 @@
 @include media-min(desktop) {
   .servicos {
     padding-top: to-rem(96);
+
+    .container-slide .swiper {
+      overflow: hidden;
+
+      .swiper-button-next {
+        display: block;
+        height: 100%;
+        top: 0;
+        right: 0;
+        width: to-rem(176);
+        background: linear-gradient(270deg, #FFF 16.15%, rgba(255, 255, 255, 0.00) 100%);
+        z-index: 7;
+        opacity: 1;
+        visibility: visible;
+        transition: .15s ease-in-out;
+
+        &::after {
+          font-size: to-rem(20);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          color: var(--Neutral-500);
+          font-weight: var(--bold);
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0;
+          visibility: hidden;
+          transition: .15s ease-in-out;
+        }
+      }
+
+
+    }
   }
 }
