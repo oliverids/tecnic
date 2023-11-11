@@ -29,6 +29,10 @@ Foram usados:
 - E a pasta `partials` contém os estilos de cada seções separados em arquivos diferentes, por questão de organização.
 </br>
 
+#### 💻 Responsividade
+A Landing Page é responsiva, se utilizando dos breakpoints de 576, 678, 1024 e 1366 pixels (como descritos no arquivo `style/abstracts/_breakpoints.scss`).
+</br>
+
 #### 🌐 Link
 Acesse o link do Desafio Técnico através <a href="https://turbo-desafio.vercel.app/">deste link</a>.
 </br>
