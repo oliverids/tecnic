@@ -103,7 +103,11 @@
 @include media-min(small) {
   .depoimentos .container-slide {
     max-width: none;
-    // margin: 0 0 0 auto;
-    // overflow: visible;
+  }
+}
+
+@include media-min(medium) {
+  .depoimento-card {
+    width: to-rem(420) !important;
   }
 }

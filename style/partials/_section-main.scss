@@ -25,3 +25,36 @@ main {
     }
   }
 }
+
+@include media-min(medium) {
+  main {
+    padding-bottom: to-rem(80);
+    
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+  
+      img {
+        order: 2;
+        max-width: to-rem(360);
+      }
+  
+      .main-info {
+        p, h1 {
+          text-align: left;
+        }
+  
+        p {
+          max-width: to-rem(320);
+          margin-right: 0;
+          margin-left: 0;
+        }
+  
+        .button {
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  }

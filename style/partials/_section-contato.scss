@@ -101,3 +101,18 @@
     }
   }
 }
+
+@include media-min(medium) {
+  .contato {
+    padding: to-rem(80) 0;
+
+    .container {
+      align-items: center;
+      justify-content: center;
+
+      .form-info, .form-wrapper {
+        width: to-rem(500);
+      }
+    }
+  }
+}

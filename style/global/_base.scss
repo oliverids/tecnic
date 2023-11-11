@@ -14,6 +14,10 @@ body {
     max-width: to-rem(540);
     margin: 0 auto;
   }
+
+  @include media-min(medium) {
+    max-width: to-rem(720);
+  }
 }
 
 .button {
@@ -40,6 +44,10 @@ body {
 
 .section {
   padding-bottom: to-rem(64);
+
+  @include media-min(medium) {
+    padding-bottom: to-rem(80);
+  }
 
   .subtitulo {
     color: var(--Neutral-400);

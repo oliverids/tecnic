@@ -45,3 +45,17 @@
     }
   }
 }
+
+@include media-min(medium) {
+  .numbers .number-lista {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .number-item {
+      width: to-rem(220);
+      padding: to-rem(40) 0;
+    }
+  }
+
+}

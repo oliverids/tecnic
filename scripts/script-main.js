@@ -6,7 +6,7 @@ menuButton.addEventListener('click', () => {
   header.classList.toggle('ativo');
 })
 
-window.onclick = e => {
+window.onclick = e => { //fecha se a sidebar se clicar fora
   if (
     header.classList.contains('ativo') &&
     !e.target.matches('#nav') &&

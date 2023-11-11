@@ -2,6 +2,7 @@
 
 .servicos {
   overflow: hidden;
+
   .container {
     flex-direction: column;
     padding-right: 0;
@@ -13,6 +14,10 @@
     .swiper {
       width: 100%;
       padding-right: to-rem(16);
+
+      @include media-min(small) {
+        padding-right: 0;
+      } 
   
       .card {
         border-radius: var(--border-regular);
