@@ -1,55 +1,64 @@
 @use "../abstracts" as *;
 
-.servicos .container {
-  flex-direction: column;
-  padding-right: 0;
-
-  h2 {
-    margin-bottom: to-rem(48);
-  }
-
-  .swiper {
-    width: 100%;
-    padding-right: to-rem(16);
-
-    .card {
-      border-radius: var(--border-regular);
-      overflow: hidden;
-      box-shadow: 0 to-rem(4) to-rem(16) 0 rgba(180, 185, 201, 0.40);
-      width: to-rem(280);
-
-      &-image {
-        width: 100%;
-        background: var(--Neutral-400);
-        height: to-rem(160);
-      }
-
-      &-info {
-        padding: to-rem(20) to-rem(20) to-rem(32);
-
-        h3 {
-          margin-bottom: to-rem(20);
+.servicos {
+  overflow: hidden;
+  .container {
+    flex-direction: column;
+    padding-right: 0;
+  
+    h2 {
+      margin-bottom: to-rem(48);
+    }
+  
+    .swiper {
+      width: 100%;
+      padding-right: to-rem(16);
+  
+      .card {
+        border-radius: var(--border-regular);
+        overflow: hidden;
+        box-shadow: 0 to-rem(4) to-rem(16) 0 rgba(180, 185, 201, 0.40);
+        width: to-rem(280);
+  
+        &-image {
+          width: 100%;
+          background: var(--Neutral-400);
+          height: to-rem(160);
         }
-
-        .card-lista {
-          &-item {
-
-            p {
-              display: flex;
-
-              &::before {
-
-                content: url(assets/icon/card-info_icon.svg);
-                margin: to-rem(4) to-rem(10) 0 0;
+  
+        &-info {
+          padding: to-rem(20) to-rem(20) to-rem(32);
+  
+          h3 {
+            margin-bottom: to-rem(20);
+          }
+  
+          .card-lista {
+            &-item {
+  
+              p {
+                display: flex;
+  
+                &::before {
+  
+                  content: url(assets/icon/card-info_icon.svg);
+                  margin: to-rem(4) to-rem(10) 0 0;
+                }
               }
-            }
-
-            &:not(:last-child) {
-              margin-bottom: to-rem(16);
+  
+              &:not(:last-child) {
+                margin-bottom: to-rem(16);
+              }
             }
           }
         }
       }
     }
+  }
+}
+
+@include media-min(small) {
+  .servicos .container-slide .swiper{
+    overflow: visible;
   }
 }

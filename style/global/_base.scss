@@ -8,6 +8,12 @@ body {
 .container {
   display: flex;
   padding: 0 to-rem(16);
+
+  @include media-min(small) {
+    padding: 0;
+    max-width: to-rem(540);
+    margin: 0 auto;
+  }
 }
 
 .button {

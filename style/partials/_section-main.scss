@@ -8,12 +8,14 @@ main {
     flex-direction: column;
 
     .main-info {
-
-      h1, p {
+      p {
+        margin: 0 auto;
+        max-width: to-rem(400);
         text-align: center;
       }
 
       h1 {
+        text-align: center;
         margin: to-rem(40) 0 to-rem(16);
       }
 
