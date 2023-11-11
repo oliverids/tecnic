@@ -18,6 +18,10 @@ body {
   @include media-min(medium) {
     max-width: to-rem(720);
   }
+
+  @include media-min(desktop-small) {
+    max-width: to-rem(900);
+  }
 }
 
 .button {

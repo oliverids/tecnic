@@ -6,77 +6,85 @@ footer {
 
   .container {
     flex-direction: column;
-    align-items: center;
 
-    .footer-nav {
-      padding: to-rem(60) 0 to-rem(56);
+    .footer-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      .nav-column {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      .footer-nav {
+        padding: to-rem(60) 0 to-rem(56);
 
-        * {
-          text-align: center;
-          color: var(--Neutral-400);
-        }
+        .nav-column {
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
 
-        &:not(:last-child) {
-          margin-bottom: to-rem(64);
-        }
-
-        ul {
-          margin: to-rem(20) auto 0;
-
-          li {
-            max-width: to-rem(280);
-            font-size: to-rem(18);
-
-            &:not(:last-child) {
-              margin-bottom: to-rem(16);
-            }
+          * {
+            text-align: center;
+            color: var(--Neutral-400);
           }
 
-          &.social-lista {
-            display: flex;
+          &:not(:last-child) {
+            margin-bottom: to-rem(64);
+          }
+
+          ul {
+            margin: to-rem(20) auto 0;
 
             li {
+              max-width: to-rem(280);
+              font-size: to-rem(18);
+
               &:not(:last-child) {
-                margin-right: to-rem(12);
-              }
-
-              .social {
-                span {
-                  //acessibilidade
-                  position: absolute;
-                  left: -99999999px;
-                }
-
-                &.facebook::before {
-                  content: url(assets/icon/footer-social_facebook.svg);
-                }
-
-                &.twitter::before {
-                  content: url(assets/icon/footer-social_twitter.svg);
-                }
-
-                &.instagram::before {
-                  content: url(assets/icon/footer-social_instagram.svg);
-                }
-
-                &.linkedin::before {
-                  content: url(assets/icon/footer-social_linkedin.svg);
-                }
+                margin-bottom: to-rem(16);
               }
             }
 
+            &.social-lista {
+              display: flex;
 
+              li {
+                &:not(:last-child) {
+                  margin-right: to-rem(12);
+                }
+
+                .social {
+                  span {
+                    //acessibilidade
+                    position: absolute;
+                    left: -99999999px;
+                  }
+
+                  &.facebook::before {
+                    content: url(assets/icon/footer-social_facebook.svg);
+                  }
+
+                  &.twitter::before {
+                    content: url(assets/icon/footer-social_twitter.svg);
+                  }
+
+                  &.instagram::before {
+                    content: url(assets/icon/footer-social_instagram.svg);
+                  }
+
+                  &.linkedin::before {
+                    content: url(assets/icon/footer-social_linkedin.svg);
+                  }
+                }
+              }
+
+
+            }
           }
         }
       }
     }
+
+
 
     .footer-credits {
       width: 100%;
@@ -96,8 +104,10 @@ footer {
 }
 
 @include media-min(medium) {
-  footer .container {
+  footer .container .footer-info {
     .footer-nav {
+      width: 100%;
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
@@ -113,7 +123,6 @@ footer {
 
         &:first-child {
           width: to-rem(160);
-
         }
 
         &:nth-child(2) {
@@ -130,5 +139,34 @@ footer {
       }
     }
   }
+}
 
+@include media-min(desktop-small) {
+  footer .container {
+    .footer-info {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .footer-nav {
+        width: 72%;
+        padding-top: 0;
+
+        .nav-column:first-child {
+          width: to-rem(130);
+        }
+      }
+    }
+
+    .footer-credits {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      p:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

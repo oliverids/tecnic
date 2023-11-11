@@ -116,3 +116,21 @@
     }
   }
 }
+
+@include media-min(desktop-small) {
+  .contato {
+    .container {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .form-info {
+        width: to-rem(400);
+      }
+
+      .form-wrapper {
+        width: to-rem(450);
+      }
+    }
+  }
+}
