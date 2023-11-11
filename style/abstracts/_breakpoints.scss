@@ -5,7 +5,7 @@ $breakpoints: (
     "small": math.div(576, 16) * 1rem, //breakpoint: 576px
     "medium": math.div(768, 16) * 1rem, //breakpoint: 768px
     "desktop-small": math.div(1024, 16) * 1rem, //breakpoint: 1024px
-    "desktop": math.div(1280, 16) * 1rem //breakpoint: 1280px
+    "desktop": math.div(1366, 16) * 1rem //breakpoint: 1366px
 );
 
 @mixin media-min($size){

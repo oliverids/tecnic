@@ -7,6 +7,10 @@
     h2 {
       text-align: center;
       margin-bottom: to-rem(48);
+
+      @include media-min(desktop) {
+        margin-bottom: to-rem(64);
+      }
     }
   }
 
@@ -77,20 +81,20 @@
           * {
             color: var(--Neutral-200);
           }
-          
+
           &-avaliacao {
 
             svg path {
-                fill: var(--Neutral-200);
-              }
-            
+              fill: var(--Neutral-200);
+            }
+
           }
         }
 
       }
 
       .swiper-pagination-bullet {
-        
+
         &-active {
           background: linear-gradient(90deg, #464E6A 0%, #B4B9C9 100%);
           box-shadow: 0 0 0 to-rem(2) var(--Neutral-200), 0 0 0 to-rem(3) var(--Neutral-600);
@@ -109,5 +113,29 @@
 @include media-min(medium) {
   .depoimento-card {
     width: to-rem(420) !important;
+  }
+}
+
+@include media-min(desktop) {
+  .depoimentos .container-slide .swiper {
+
+    .swiper-pagination {
+      margin-top: to-rem(64);
+    }
+
+    .depoimento-card {
+      width: to-rem(496) !important;
+      max-width: none;
+
+      .depoimento {
+        &-nome {
+          font-size: to-rem(24);
+        }
+
+        &-texto {
+          font-size: to-rem(18);
+        }
+      }
+    }
   }
 }

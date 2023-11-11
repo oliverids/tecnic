@@ -22,12 +22,20 @@ h1 {
   font-size: to-rem(28);
   line-height: 1.2;
   color: var(--Neutral-600);
+
+  @include media-min(desktop) {
+    font-size: to-rem(40);
+  }
 }
 
 h2 {
   font-weight: var(--semibold);
   font-size: to-rem(24);
   line-height: 1.2;
+
+  @include media-min(desktop) {
+    font-size: to-rem(36);
+  }
 }
 
 h3 {

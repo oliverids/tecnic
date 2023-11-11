@@ -3,7 +3,8 @@
 header {
   background: var(--Neutral-700);
   padding: to-rem(24) 0;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,62 +54,68 @@ header {
       }
     }
 
-      #nav {
-        position: absolute;
-        height: calc(100vh - to-rem(86)); // 86 é a altura do header
-        width: to-rem(328);
-        top: to-rem(86);
-        right: to-rem(-328);
-        background: var(--Neutral-700);
-        padding: to-rem(40) to-rem(16) 0;
-        z-index: 6;
-        visibility: hidden;
-        transition: .34s ease-in-out;
+    #nav {
+      position: absolute;
+      height: calc(100vh - to-rem(86)); // 86 é a altura do header
+      width: to-rem(328);
+      top: to-rem(86);
+      right: to-rem(-328);
+      background: var(--Neutral-700);
+      padding: to-rem(40) to-rem(16) 0;
+      z-index: 6;
+      visibility: hidden;
+      transition: .34s ease-in-out;
 
-        .internal-nav {
-          margin-bottom: to-rem(32);
+      .internal-nav {
+        margin-bottom: to-rem(32);
 
-          li {
-            width: fit-content;
+        li {
+          width: fit-content;
 
-            &:not(:last-child) {
-              margin-bottom: to-rem(16);
-            }
-
-            a {
-              font-weight: var(--medium);
-              font-size: to-rem(16);
-              line-height: 1.2;
-              padding: to-rem(14.5) to-rem(16);
-              color: var(--Neutral-500);
-            }
+          &:not(:last-child) {
+            margin-bottom: to-rem(16);
           }
-        }
 
-        .nav-ctas {
-          display: flex;
-          flex-direction: column;
-
-          .button {
+          a {
+            font-weight: var(--medium);
             font-size: to-rem(16);
-            width: 100%;
-            
-            &.button-sign {
-              background: var(--Neutral-500);
-            }
+            line-height: 1.2;
+            padding: to-rem(14.5) to-rem(16);
+            color: var(--Neutral-500);
+            transition: .2s ease-in-out;
 
-            &.button-user {
-              margin-top: to-rem(16);
-              color: var(--Neutral-500);
-
-              &::before {
-                content: url(assets/icon/button-user_icon.svg);
-                margin-right: to-rem(10);
-              }
+            &:hover {
+              color: var(--Neutral-300);
             }
           }
         }
       }
+
+      .nav-ctas {
+        display: flex;
+        flex-direction: column;
+
+        .button {
+          font-size: to-rem(16);
+          width: 100%;
+
+          &.button-sign {
+            background: var(--Neutral-500);
+          }
+
+          &.button-user {
+            margin-top: to-rem(16);
+            color: var(--Neutral-500);
+
+            &::before {
+              content: url(assets/icon/button-user_icon.svg);
+              margin-right: to-rem(10);
+              margin-top: to-rem(3);
+            }
+          }
+        }
+      }
+    }
   }
 
   &.ativo {
@@ -139,6 +146,50 @@ header {
       #nav {
         visibility: visible;
         right: 0;
+      }
+    }
+  }
+}
+
+@include media-min(desktop) {
+  header .container {
+    #menu {
+      display: none;
+    }
+
+    #nav {
+      position: static;
+      height: auto;
+      background: none;
+      width: auto;
+      padding: 0;
+      visibility: visible;
+      transition: none;
+      display: flex;
+      align-items: center;
+
+      .internal-nav {
+        display: flex;
+        margin: 0 to-rem(24) 0 0;
+
+        li:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: to-rem(8);
+        }
+      }
+
+      .nav-ctas {
+        flex-direction: row;
+
+        .button {
+          width: fit-content;
+          min-width: 0;
+
+          &.button-user {
+            margin-top: to-rem(0);
+            margin-left: to-rem(16);
+          }
+        }
       }
     }
   }

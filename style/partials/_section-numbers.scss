@@ -59,3 +59,14 @@
   }
 
 }
+
+@include media-min(desktop) {
+  .numbers .number-lista .number-item {
+    width: to-rem(384);
+    padding: to-rem(40) to-rem(72);
+
+    h3 {
+      font-size: to-rem(64);
+    }
+  }
+}

@@ -110,7 +110,8 @@
       align-items: center;
       justify-content: center;
 
-      .form-info, .form-wrapper {
+      .form-info,
+      .form-wrapper {
         width: to-rem(500);
       }
     }
@@ -133,4 +134,19 @@
       }
     }
   }
+}
+
+@include media-min(desktop) {
+  .contato {
+    padding: to-rem(96) 0;
+
+    .container {
+
+      .form-info,
+      .form-wrapper {
+        width: to-rem(520);
+      }
+    }
+  }
+
 }

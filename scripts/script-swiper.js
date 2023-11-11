@@ -1,5 +1,7 @@
+let windowWidth = window.innerWidth;
+
 let servicosSlider = new Swiper(".card-slider", {
-  spaceBetween: 20,
+  spaceBetween: windowWidth < 1366 ? 20 : 32,
   centeredSlides: false,
   slidesPerView: 'auto',
   pagination: {
@@ -9,7 +11,7 @@ let servicosSlider = new Swiper(".card-slider", {
 });
 
 let depoimentosSlider = new Swiper(".depoimentos-slider", {
-  spaceBetween: 16,
+  spaceBetween: windowWidth < 1366 ? 16 : 40,
   centeredSlides: true,
   slidesPerView: 'auto',
   pagination: {
