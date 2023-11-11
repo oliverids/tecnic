@@ -28,6 +28,14 @@ footer {
             color: var(--Neutral-400);
           }
 
+          a {
+            transition: .2s ease-in-out;
+
+            &:hover {
+              color: var(--Neutral-300);
+            }
+          }
+
           li, a {
             line-height: 1.5;
           }
@@ -56,32 +64,22 @@ footer {
                   margin-right: to-rem(12);
                 }
 
-                .social {
-                  span {
-                    //acessibilidade
-                    position: absolute;
-                    left: -99999999px;
+                .social{
+                  svg path, svg rect{
+                    transition: .3s ease-in-out;
                   }
 
-                  &.facebook::before {
-                    content: url(assets/icon/footer-social_facebook.svg);
-                  }
+                  &:hover svg{
+                    rect {
+                      fill: var(--Neutral-600);
+                    }
 
-                  &.twitter::before {
-                    content: url(assets/icon/footer-social_twitter.svg);
-                  }
-
-                  &.instagram::before {
-                    content: url(assets/icon/footer-social_instagram.svg);
-                  }
-
-                  &.linkedin::before {
-                    content: url(assets/icon/footer-social_linkedin.svg);
+                    path {
+                      fill: var(--Neutral-200);
+                    }
                   }
                 }
               }
-
-
             }
           }
         }

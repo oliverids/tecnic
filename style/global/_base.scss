@@ -42,6 +42,11 @@ body {
   width: fit-content;
   background: var(--Neutral-600);
   color: var(--Neutral-200);
+  transition: .3s ease-in-out;
+
+  &:hover {
+    background: var(--Neutral-700);
+  }
 
   &.--borda {
     background: none;

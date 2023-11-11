@@ -163,6 +163,10 @@ body {
   width: fit-content;
   background: var(--Neutral-600);
   color: var(--Neutral-200);
+  transition: 0.3s ease-in-out;
+}
+.button:hover {
+  background: var(--Neutral-700);
 }
 .button.--borda {
   background: none;
@@ -307,15 +311,27 @@ header .container #nav .nav-ctas .button {
 }
 header .container #nav .nav-ctas .button.button-sign {
   background: var(--Neutral-500);
+  transition: 0.3s ease-in-out;
+}
+header .container #nav .nav-ctas .button.button-sign:hover {
+  background: var(--Neutral-600);
 }
 header .container #nav .nav-ctas .button.button-user {
   margin-top: 1rem;
   color: var(--Neutral-500);
+  transition: 0.3s ease-in-out;
 }
-header .container #nav .nav-ctas .button.button-user::before {
-  content: url(assets/icon/button-user_icon.svg);
+header .container #nav .nav-ctas .button.button-user svg {
   margin-right: 0.625rem;
-  margin-top: 0.1875rem;
+}
+header .container #nav .nav-ctas .button.button-user svg path {
+  transition: 0.3s ease-in-out;
+}
+header .container #nav .nav-ctas .button.button-user:hover {
+  color: var(--Neutral-400);
+}
+header .container #nav .nav-ctas .button.button-user:hover svg path {
+  fill: var(--Neutral-400);
 }
 header.ativo::before {
   display: block;
@@ -586,10 +602,11 @@ main .container .main-info .button {
   position: relative;
 }
 .depoimentos .container-slide .swiper .depoimento-card .depoimento {
-  background: var(--Neutral-200);
   padding: 3.5rem 1.25rem 3rem;
   border-radius: var(--border-large);
   border: 0.09375rem solid rgba(70, 78, 106, 0.6);
+  background: var(--Neutral-200);
+  transition: 0.3s ease-in-out;
 }
 .depoimentos .container-slide .swiper .depoimento-card .depoimento-nome {
   color: var(--Neutral-600);
@@ -622,7 +639,7 @@ main .container .main-info .button {
 }
 .depoimentos .container-slide .swiper .depoimento-card.swiper-slide-active .depoimento {
   background: linear-gradient(90deg, #464E6A 0%, #B4B9C9 100%);
-  border-color: transparent;
+  border-color: var(--Neutral-200);
 }
 .depoimentos .container-slide .swiper .depoimento-card.swiper-slide-active .depoimento * {
   color: var(--Neutral-200);
@@ -652,6 +669,9 @@ main .container .main-info .button {
   .depoimentos .container-slide .swiper .depoimento-card {
     width: 31rem !important;
     max-width: none;
+  }
+  .depoimentos .container-slide .swiper .depoimento-card .depoimento {
+    padding: 3.5rem 3rem 3rem;
   }
   .depoimentos .container-slide .swiper .depoimento-card .depoimento-nome {
     font-size: 1.5rem;
@@ -700,7 +720,7 @@ main .container .main-info .button {
 .contato .container .form-wrapper form fieldset label {
   font-weight: var(--medium);
   color: var(--Neutral-500);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 .contato .container .form-wrapper form fieldset input,
 .contato .container .form-wrapper form fieldset select {
@@ -808,6 +828,12 @@ footer .container .footer-info .footer-nav .nav-column * {
   text-align: center;
   color: var(--Neutral-400);
 }
+footer .container .footer-info .footer-nav .nav-column a {
+  transition: 0.2s ease-in-out;
+}
+footer .container .footer-info .footer-nav .nav-column a:hover {
+  color: var(--Neutral-300);
+}
 footer .container .footer-info .footer-nav .nav-column li, footer .container .footer-info .footer-nav .nav-column a {
   line-height: 1.5;
 }
@@ -830,21 +856,14 @@ footer .container .footer-info .footer-nav .nav-column ul.social-lista {
 footer .container .footer-info .footer-nav .nav-column ul.social-lista li:not(:last-child) {
   margin-right: 0.75rem;
 }
-footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social span {
-  position: absolute;
-  left: -99999999px;
+footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social svg path, footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social svg rect {
+  transition: 0.3s ease-in-out;
 }
-footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social.facebook::before {
-  content: url(assets/icon/footer-social_facebook.svg);
+footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social:hover svg rect {
+  fill: var(--Neutral-600);
 }
-footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social.twitter::before {
-  content: url(assets/icon/footer-social_twitter.svg);
-}
-footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social.instagram::before {
-  content: url(assets/icon/footer-social_instagram.svg);
-}
-footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social.linkedin::before {
-  content: url(assets/icon/footer-social_linkedin.svg);
+footer .container .footer-info .footer-nav .nav-column ul.social-lista li .social:hover svg path {
+  fill: var(--Neutral-200);
 }
 footer .container .footer-credits {
   width: 100%;

@@ -101,16 +101,32 @@ header {
 
           &.button-sign {
             background: var(--Neutral-500);
+            transition: .3s ease-in-out;
+
+            &:hover {
+              background: var(--Neutral-600);
+            }
           }
 
           &.button-user {
             margin-top: to-rem(16);
             color: var(--Neutral-500);
+            transition: .3s ease-in-out;
 
-            &::before {
-              content: url(assets/icon/button-user_icon.svg);
+            svg {
               margin-right: to-rem(10);
-              margin-top: to-rem(3);
+
+              path {
+                transition: .3s ease-in-out;
+              }
+            }
+
+            &:hover {
+              color: var(--Neutral-400);
+
+              svg path {
+                fill:var(--Neutral-400);
+              }
             }
           }
         }
