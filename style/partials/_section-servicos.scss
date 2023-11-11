@@ -80,13 +80,11 @@
     .container-slide .swiper {
       overflow: hidden;
 
-      .swiper-button-next {
+      .swiper-button-next, .swiper-button-prev {
         display: block;
         height: 100%;
-        top: 0;
-        right: 0;
         width: to-rem(176);
-        background: linear-gradient(270deg, #FFF 16.15%, rgba(255, 255, 255, 0.00) 100%);
+        top: 0;
         z-index: 7;
         opacity: 1;
         visibility: visible;
@@ -95,7 +93,6 @@
         &::after {
           font-size: to-rem(20);
           position: absolute;
-          right: 0;
           top: 50%;
           color: var(--Neutral-500);
           font-weight: var(--bold);
@@ -105,6 +102,24 @@
           opacity: 0;
           visibility: hidden;
           transition: .15s ease-in-out;
+        }
+      }
+
+      .swiper-button-next {
+        right: 0;
+        background: linear-gradient(270deg, #FFF 16.15%, rgba(255, 255, 255, 0.00) 100%);
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      .swiper-button-prev {
+        left: 0;
+        background: linear-gradient(90deg, #FFF 16.15%, rgba(255, 255, 255, 0.00) 100%);
+
+        &::after {
+          left: to-rem(2);
         }
       }
 

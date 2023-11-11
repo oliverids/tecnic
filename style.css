@@ -529,30 +529,41 @@ main .container .main-info .button {
   .servicos .container-slide .swiper {
     overflow: hidden;
   }
-  .servicos .container-slide .swiper .swiper-button-next {
+  .servicos .container-slide .swiper .swiper-button-next, .servicos .container-slide .swiper .swiper-button-prev {
     display: block;
     height: 100%;
-    top: 0;
-    right: 0;
     width: 11rem;
-    background: linear-gradient(270deg, #FFF 16.15%, rgba(255, 255, 255, 0) 100%);
+    top: 0;
     z-index: 7;
     opacity: 1;
     visibility: visible;
     transition: 0.15s ease-in-out;
   }
-  .servicos .container-slide .swiper .swiper-button-next::after {
+  .servicos .container-slide .swiper .swiper-button-next::after, .servicos .container-slide .swiper .swiper-button-prev::after {
     font-size: 1.25rem;
     position: absolute;
-    right: 0;
     top: 50%;
     color: var(--Neutral-500);
     font-weight: var(--bold);
   }
-  .servicos .container-slide .swiper .swiper-button-next.swiper-button-disabled {
+  .servicos .container-slide .swiper .swiper-button-next.swiper-button-disabled, .servicos .container-slide .swiper .swiper-button-prev.swiper-button-disabled {
     opacity: 0;
     visibility: hidden;
     transition: 0.15s ease-in-out;
+  }
+  .servicos .container-slide .swiper .swiper-button-next {
+    right: 0;
+    background: linear-gradient(270deg, #FFF 16.15%, rgba(255, 255, 255, 0) 100%);
+  }
+  .servicos .container-slide .swiper .swiper-button-next::after {
+    right: 0;
+  }
+  .servicos .container-slide .swiper .swiper-button-prev {
+    left: 0;
+    background: linear-gradient(90deg, #FFF 16.15%, rgba(255, 255, 255, 0) 100%);
+  }
+  .servicos .container-slide .swiper .swiper-button-prev::after {
+    left: 0.125rem;
   }
 }
 .numbers .container {
@@ -839,6 +850,9 @@ main .container .main-info .button {
   .contato .container .form-info,
   .contato .container .form-wrapper {
     width: 32.5rem;
+  }
+  .contato .container .form-wrapper {
+    padding: 3rem 2.5rem;
   }
 }
 footer {
