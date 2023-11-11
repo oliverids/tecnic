@@ -2,6 +2,7 @@
 
 .servicos .container {
   flex-direction: column;
+  padding-right: 0;
 
   h2 {
     margin-bottom: to-rem(48);
@@ -9,6 +10,7 @@
 
   .swiper {
     width: 100%;
+    padding-right: to-rem(16);
 
     .card {
       border-radius: var(--border-regular);

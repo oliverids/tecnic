@@ -55,14 +55,13 @@ header {
 
       #nav {
         position: absolute;
-        height: calc(100vh - to-rem(86));
+        height: calc(100vh - to-rem(86)); // 86 é a altura do header
         width: to-rem(328);
         top: to-rem(86);
         right: to-rem(-328);
         background: var(--Neutral-700);
         padding: to-rem(40) to-rem(16) 0;
         z-index: 6;
-        opacity: 0;
         visibility: hidden;
         transition: .34s ease-in-out;
 
@@ -113,6 +112,17 @@ header {
   }
 
   &.ativo {
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: to-rem(86);
+      content: '';
+      width: 100vw;
+      height: calc(100vh - to-rem(86));
+      background: rgba($color: #000000, $alpha: .3);
+    }
+
     .container {
       #menu div {
         background: transparent;
@@ -127,7 +137,6 @@ header {
       }
 
       #nav {
-        opacity: 1;
         visibility: visible;
         right: 0;
       }
