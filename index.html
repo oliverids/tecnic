@@ -10,6 +10,10 @@
 
   <!-- SWIPER SLIDER -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- AOS ANIMATE -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -47,9 +51,9 @@
 
   <main>
     <div class="container">
-      <img src="assets/hero-banner_image.png" alt="">
+      <img src="assets/hero-banner_image.png" alt="" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
 
-      <div class="main-info">
+      <div class="main-info" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
         <h1>Lorem ipsum dolor sit amet, consectetur</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Mauris a odio at purus.</p>
         <a href="#" class="button">Button</a>
@@ -57,7 +61,7 @@
     </div>
   </main>
 
-  <section class="section servicos">
+  <section class="section servicos" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
     <div class="container">
       <h2>Serviços</h2>
     </div>
@@ -157,7 +161,7 @@
     </div>
   </section>
 
-  <section class="section numbers">
+  <section class="section numbers" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
     <div class="container">
       <span class="subtitulo">Big numbers</span>
       <h2>Lorem ipsum dolor sit amet, <span class="underline">consectetur</span></h2>
@@ -183,7 +187,7 @@
     </div>
   </section>
 
-  <section class="section depoimentos">
+  <section class="section depoimentos" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
     <div class="container">
       <h2>Quem já contratou <span class="highlight">recomenda</span></h2>
     </div>
@@ -347,7 +351,7 @@
             </div>
           </li>
 
-          <li class="swiper-slide depoimento-card">
+          <li class="swiper-slide depoimento-card" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
             <img class="depoimento-foto" src="" alt="">
 
             <div class="depoimento">
@@ -434,14 +438,14 @@
 
   <section class="section contato">
     <div class="container">
-      <div class="form-info">
+      <div class="form-info" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
         <span class="subtitulo">Formulário</span>
         <h2>Lorem ipsum dolor sit amet, <span class="underline">consectetur</span> adipis cing elit. Mauris a odio at
           purus.</h2>
         <p>Mauris a odio at purus faucibus laoreet. Nam est est, a nibh vel, tempor tempor.</p>
       </div>
 
-      <div class="form-wrapper">
+      <div class="form-wrapper" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
         <h3>Faça uma demonstração</h3>
 
         <form action="">
@@ -559,6 +563,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="scripts/script-main.js"></script>
   <script src="scripts/script-swiper.js"></script>
+
+  <script>AOS.init();</script>
 </body>
 
 </html>
