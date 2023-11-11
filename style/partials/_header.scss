@@ -102,9 +102,12 @@ header {
           &.button-sign {
             background: var(--Neutral-500);
             transition: .3s ease-in-out;
+            border: to-rem(2) solid transparent;
 
             &:hover {
-              background: var(--Neutral-600);
+              background: none;
+              color: var(--Neutral-400);
+              border: to-rem(2) solid currentColor;
             }
           }
 
@@ -122,10 +125,12 @@ header {
             }
 
             &:hover {
-              color: var(--Neutral-400);
+              background: var(--Neutral-400);
+              border-color: var(--Neutral-400);
+              color: var(--Neutral-500);
 
               svg path {
-                fill:var(--Neutral-400);
+                fill:var(--Neutral-500);
               }
             }
           }

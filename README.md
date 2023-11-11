@@ -14,7 +14,7 @@
 
 Foram usados:
 - HTML
-- SASS modules
+- SASS
 - CSS
 - JavaScript 
 - SwiperJS

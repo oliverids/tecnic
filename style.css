@@ -173,7 +173,7 @@ body {
 .button.--borda {
   background: none;
   color: var(--Neutral-500);
-  border: 0.09375rem solid currentColor;
+  border: 0.125rem solid currentColor;
 }
 
 .section {
@@ -314,9 +314,12 @@ header .container #nav .nav-ctas .button {
 header .container #nav .nav-ctas .button.button-sign {
   background: var(--Neutral-500);
   transition: 0.3s ease-in-out;
+  border: 0.125rem solid transparent;
 }
 header .container #nav .nav-ctas .button.button-sign:hover {
-  background: var(--Neutral-600);
+  background: none;
+  color: var(--Neutral-400);
+  border: 0.125rem solid currentColor;
 }
 header .container #nav .nav-ctas .button.button-user {
   margin-top: 1rem;
@@ -330,10 +333,12 @@ header .container #nav .nav-ctas .button.button-user svg path {
   transition: 0.3s ease-in-out;
 }
 header .container #nav .nav-ctas .button.button-user:hover {
-  color: var(--Neutral-400);
+  background: var(--Neutral-400);
+  border-color: var(--Neutral-400);
+  color: var(--Neutral-500);
 }
 header .container #nav .nav-ctas .button.button-user:hover svg path {
-  fill: var(--Neutral-400);
+  fill: var(--Neutral-500);
 }
 header.ativo::before {
   display: block;
