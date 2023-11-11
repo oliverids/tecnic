@@ -17,6 +17,7 @@ let depoimentosSlider = new Swiper(".depoimentos-slider", {
   spaceBetween: windowWidth < 1366 ? 16 : 40,
   centeredSlides: true,
   slidesPerView: 'auto',
+  loop: true,
   pagination: {
     el: ".depoimento-pagination",
     clickable: true,

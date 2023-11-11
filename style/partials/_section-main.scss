@@ -38,6 +38,7 @@ main {
       img {
         order: 2;
         max-width: to-rem(360);
+        border-radius: var(--border-regular);
       }
 
       .main-info {

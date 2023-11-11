@@ -430,6 +430,7 @@ main .container .main-info .button {
   main .container img {
     order: 2;
     max-width: 22.5rem;
+    border-radius: var(--border-regular);
   }
   main .container .main-info p,
   main .container .main-info h1 {
