@@ -513,7 +513,7 @@ main .container .main-info .button {
 .servicos .container .swiper .card-info .card-lista-item:not(:last-child) {
   margin-bottom: 1rem;
 }
-.servicos .container .swiper .swiper-button-next {
+.servicos .container .swiper .swiper-button-prev, .servicos .container .swiper .swiper-button-next {
   display: none;
 }
 

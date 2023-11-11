@@ -60,7 +60,7 @@
         }
       }
 
-      .swiper-button-next {
+      .swiper-button-prev, .swiper-button-next {
         display: none;
       }
     }
@@ -122,8 +122,6 @@
           left: to-rem(2);
         }
       }
-
-
     }
   }
 }
